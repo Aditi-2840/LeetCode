@@ -5,9 +5,7 @@ class Solution {
         for(String words:arr){
            char c=words.charAt(words.length()-1);
            int i=c-'0';
-           StringBuilder sb=new StringBuilder(words);
-           sb.deleteCharAt(sb.length()-1);
-           str[i-1]=sb.toString();
+           str[i-1]=words.substring(0, words.length()-1);
            
         }
         String res="";
