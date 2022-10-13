@@ -8,10 +8,6 @@ class Solution {
            str[i-1]=words.substring(0, words.length()-1);
            
         }
-        String res="";
-        for(int i=0;i<str.length-1;i++) {
-        	res+=str[i]+" ";
-        }
-        return res+str[str.length-1];
+        return String.join(" ", str);
     }
 }
