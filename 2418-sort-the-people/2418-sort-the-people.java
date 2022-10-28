@@ -7,8 +7,7 @@ class Solution {
         }
         Arrays.sort(heights);
         String res[]=new String[n];
-        int idx=0;
-        for(int i=n-1;i>=0;i--){
+        for(int i=n-1, idx=0;i>=0;i--){
             res[idx++]=hm.get(heights[i]);
         }
         
