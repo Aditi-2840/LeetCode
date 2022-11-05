@@ -12,7 +12,7 @@ class Solution {
         	}
         	else {
         		ch= t.charAt(i);
-                break;
+                //break;
         	}
         	
         }
