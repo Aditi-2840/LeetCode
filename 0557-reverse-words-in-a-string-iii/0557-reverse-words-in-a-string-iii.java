@@ -6,12 +6,12 @@ class Solution {
             for(int j=arr[i].length()-1;j>=0;j--){
                 res.append(arr[i].charAt(j));
             }
-            if(i==arr.length-1)
-                res=res;
-            else
+            // if(i==arr.length-1)
+            //     res=res;
+            // else
                 res.append(" ");
             
         }
-        return res.toString();
+        return res.toString().trim();
     }
 }
