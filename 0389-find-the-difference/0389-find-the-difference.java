@@ -11,7 +11,7 @@ class Solution {
             	s=sb.toString();
         	}
         	else {
-        		ch=t.charAt(i);
+        		return t.charAt(i);
         	}
         	
         }
