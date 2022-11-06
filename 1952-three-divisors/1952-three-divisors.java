@@ -5,10 +5,10 @@ class Solution {
         while(i<=n){
             if(n%i==0)
                 cnt++;
+            if(cnt>3)
+                break;
             i++;
         }
-        if(cnt==3)
-            return true;
-        return false;
+        return cnt==3;
     }
 }
