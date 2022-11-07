@@ -1,18 +1,18 @@
 class Solution {
     public int minimumSum(int num) {
-        String s=String.valueOf(num);
-		int arr[]=new int[s.length()];
-		
-		for(int i=0;i<arr.length;i++) {
-			arr[i]=s.charAt(i)-'0';
+        List<Integer> l=new ArrayList<>();
+		while(num>0) {
+			l.add(num%10);
+			num/=10;
 		}
-		Arrays.sort(arr);
+		Collections.sort(l);
+		
 		String a = "", b="";
-		for(int i=0;i<arr.length;i++) {
+		for(int i=0;i<l.size();i++) {
 			if(i%2==0)
-				a+=arr[i];
+				a+=l.get(i);
 			else
-				b+=arr[i];
+				b+=l.get(i);
 		}
 		int sum=Integer.parseInt(a)+Integer.parseInt(b);
         return sum;
