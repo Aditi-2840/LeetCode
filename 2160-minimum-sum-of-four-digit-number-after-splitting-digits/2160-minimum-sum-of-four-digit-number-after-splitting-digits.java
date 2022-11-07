@@ -1,12 +1,15 @@
 class Solution {
     public int minimumSum(int num) {
-        List<String> l=new ArrayList<String>();
-		while(num>0) {
-			l.add(String.valueOf(num%10));
-			num/=10;
-		}
-		Collections.sort(l);
-		int sum=Integer.parseInt((l.get(0)+l.get(2)))+Integer.parseInt((l.get(1)+l.get(3)));
-        return sum;
+        int[] arr = new int[4];
+        int cur = 0;
+        while(num > 0)
+        {
+            arr[cur++] = num % 10;
+            num /= 10;
+        }
+        Arrays.sort(arr);
+        int num1 = arr[0] * 10 + arr[2];
+        int num2 = arr[1] * 10 + arr[3]; 
+        return num1 + num2;
     }
 }
